@@ -12,6 +12,8 @@ Integrantes:
 - Guilherme Reis RGM: 47513438
 - Gabriel Franco RGM: 47451289
 
+![Modelo Entidade-Relacionamento](ImagemDoGrupo.jpeg)
+
 ## 1. Caracterização da Organização
 
 - **Nome e natureza da organização:**  Xenon multimarcas (Concenssionaria )
