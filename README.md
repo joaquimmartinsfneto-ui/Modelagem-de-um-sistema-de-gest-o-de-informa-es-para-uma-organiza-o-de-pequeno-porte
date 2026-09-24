@@ -47,8 +47,8 @@ Os requisitos não funcionais que nos averiguamos foram: Usabilidade e disponibi
 
 ## 4. Regras de Negócio 📋
 
-- **Regras operacionais:** Um pedido só pode ser feito se houver estoque, em caso de financiamento só pode haver pedido se o banco aprovar
-Um pedido só pode ser feito se as informações do veículo estiver certas
+- **Regras operacionais:** Um pedido só pode ser feito se houver estoque, em caso de financiamento só pode haver pedido se o banco aprovar.
+Um pedido só pode ser feito se as informações do veículo estiver certas.
 
 - **Restrições organizacionais:** Um pedido só pode ser feito se as informações do veículo estiver certas
 ---
