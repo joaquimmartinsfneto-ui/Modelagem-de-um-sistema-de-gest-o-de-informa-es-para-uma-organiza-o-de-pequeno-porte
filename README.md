@@ -34,7 +34,7 @@ Integrantes:
 
 ## 3. Requisitos do Sistema
 O Sistema devera armazenar dados do cliente como CPF, Nome, Endereço e Email, tambêm tera que organizar as vendas com datas e formas de pagamentos e que apos a compra ser realizada  com aprovação do finaciamento do banco, ela devera criar um "Pedido de venda" que e aonde vai ter dados como a identificação do pedido, nota fiscal, nome do cartorio, status do pedido e data que o pedido foi realizado. 
-Tambêm tem que haver uma haba sobre os veiculos onde guardara dados como modelo do veiculo, preço, ano do veiculo, marca, chassi para indeitificação, o tipo de veiculo se ele e uma SUV ou outro tipo de carro.. 
+Tambêm tem que haver uma aba sobre os veiculos onde guardara dados como modelo do veiculo, preço, ano do veiculo, marca, chassi para indeitificação, o tipo de veiculo se ele e uma SUV ou outro tipo de carro.. 
 Tambêm tera que haver dados sobre os Funcionarios para ter uma noção sobre as realizações de vendas, os funcionarios teram que ter dados armazenados como nome, CPF, telefone e cargo. 
 
 ### 3.1 Requisitos Funcionais
