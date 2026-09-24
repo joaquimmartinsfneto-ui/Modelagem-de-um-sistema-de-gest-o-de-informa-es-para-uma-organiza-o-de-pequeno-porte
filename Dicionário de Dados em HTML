@@ -1,0 +1,77 @@
+
+CLIENTE {
+	id_cliente integer pk increments unique
+	nm_cliente varchar(100)
+	nr_cpf char(11) unique
+	nr_telefone varchar(20)
+	ds_email varchar(100)
+	ds_endereco varchar(200)
+}
+
+FUNCIONARIO {
+	id_funcionario integer pk increments unique
+	nm_funcionario varchar(100)
+	nr_cpf char(11) unique
+	ds_cargo varchar(50)
+	nr_telefone varchar(20)
+}
+
+VEICULO {
+	id_veiculo integer pk unique
+	ds_chassi varchar(17) unique
+	nm_marca varchar
+	nm_modelo varchar(50)
+	nr_ano integer
+	vl_preco decimal
+	ds_cor varchar(30)
+	tp_veiculo varchar(20)
+	st_veiculo varchar(20)
+}
+
+VENDA {
+	id_venda integer pk increments unique
+	id_cliente integer *> CLIENTE.id_cliente
+	id_funcionario integer *> FUNCIONARIO.id_funcionario
+	id_veiculo integer unique > VEICULO.id_veiculo
+	dt_venda date
+	vl_total decimal
+	ds_forma_pagamento varchar(30)
+	st_venda varchar(20)
+}
+
+FINANCIAMENTO {
+	id_financiamento integer pk increments unique
+	id_banco integer *> BANCO.id_banco
+	id_venda integer unique > VENDA.id_venda
+	vl_financiado decimal(12,2)
+	qt_parcelas integer
+	vl_parcela decimal(12,2)
+	pc_taxa_juros decimal(5,2)
+	st_financiamento varchar(20)
+}
+
+BANCO {
+	id_banco integer pk increments unique
+	nm_banco varchar(100)
+	nr_cnpj varchar(14) unique
+	nr_telefone varchar(20)
+}
+
+ENTREGA {
+	id_entrega integer pk increments unique
+	id_venda integer unique > VENDA.id_venda
+	dt_prevista date
+	dt_entrega date
+	ds_endereco_entrega varchar(200)
+	st_entrega varchar(20)
+}
+
+PEDIDO_DE_VENDA {
+	id_pedido integer pk increments unique
+	dt_pedido date
+	nr_nota_fiscal varchar(50)
+	nm_cartorio varchar(100)
+	st_pedido varchar(20)
+	id_venda integer unique > VENDA.id_venda
+}
+
