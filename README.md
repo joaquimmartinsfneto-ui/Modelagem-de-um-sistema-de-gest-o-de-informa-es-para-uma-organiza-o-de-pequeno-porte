@@ -294,6 +294,7 @@ Um pedido só pode ser feito se as informações do veículo estiver certas
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
+![Modelo DER Imagem](ModeloDER.png)
 Link: https://app.brmodeloweb.com/publicview/6ab03281226d3f36496c6ecb
 
 ---
