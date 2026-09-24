@@ -59,10 +59,15 @@ Um pedido só pode ser feito se as informações do veículo estiver certas
 ##                  CLIENTE
 |----------|-----------|------------------------------|
 | **id_cliente** | Identificador único do cliente | PK, obrigatório e exclusivo para cada cliente cadastrado. |
+
 | **nm_cliente** | Nome completo do cliente seja civil ou social | Obrigatório para identificação do cliente, devendo conter ao menos nome e sobrenome. |
+
 | **nr_cpf** | Cadastro de pessoa física do cliente | Obrigatório, deve ser único para cada cliente e possuir formato válido com 11 dígitos numéricos. |
+
 | **nr_telefone** | Telefone principal de contato ou WhatsApp do cliente | Obrigatório, deve conter DDD e número telefônico válido. |
+
 | **ds_email** | Endereço eletrônico de contato do cliente | Opcional, quando preenchido deve possuir formato sintático de e-mail válido (ex: usuario@dominio.com). |
+
 | **ds_endereco** | Endereço residencial completo do cliente | Opcional, texto livre contendo logradouro, número, bairro, cidade, UF e CEP. |
 
 |----------|-----------|------------------------------|
