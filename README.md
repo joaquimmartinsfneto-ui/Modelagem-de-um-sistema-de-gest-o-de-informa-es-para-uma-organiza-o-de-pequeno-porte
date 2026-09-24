@@ -18,9 +18,9 @@ Integrantes:
 - **Contexto e porte:** Com fins lucrativos, Uma empresa com micro operações, com uma quantidade baixa de funcionarios no total atual 6 podendo aumentar.  
 - **Problemas e necessidades identificados:** Falta de organização e comprovante de transações, manutenções não organizadas.
 - **Justificativa da escolha:** Um de nossos integrantes do grupo identificou a necessidade da empresa e botou que encaixaria perfeitamente no trabalho solicitado, consideramos o fato dessa área ter bastante movimentação
-- **Evidências da organização:** instagram: @multimarcasxenon 
-                                 Cartão digital da empresa: https://cartao-digital.com/xenonmultimarcas/
-                                 local do Maps: https://share.google/2ecURySgI5GrRgYwr
+- **Evidências da organização:** instagram: @multimarcasxenon
+- Cartão digital da empresa: https://cartao-digital.com/xenonmultimarcas/
+- local do Maps: https://share.google/2ecURySgI5GrRgYwr
 
 ---
 
@@ -55,9 +55,9 @@ Um pedido só pode ser feito se as informações do veículo estiver certas
 
 | Atributo | Descrição | Regra de negócio associada |
 
-|----------|-----------|------------------------------|
+
 ##                  CLIENTE
-|----------|-----------|------------------------------|
+
 | **id_cliente** | Identificador único do cliente | PK, obrigatório e exclusivo para cada cliente cadastrado. |
 
 | **nm_cliente** | Nome completo do cliente seja civil ou social | Obrigatório para identificação do cliente, devendo conter ao menos nome e sobrenome. |
@@ -70,76 +70,113 @@ Um pedido só pode ser feito se as informações do veículo estiver certas
 
 | **ds_endereco** | Endereço residencial completo do cliente | Opcional, texto livre contendo logradouro, número, bairro, cidade, UF e CEP. |
 
-|----------|-----------|------------------------------|
+
 ##                FUNCIONARIO
-|----------|-----------|------------------------------|
+
 | **id_funcionario** | Identificador único do funcionário | PK, obrigatório e exclusivo para cada colaborador cadastrado no sistema. |
+
 | **nm_funcionario** | Nome completo do funcionário ou vendedor | Obrigatório para qualificação e identificação nas vendas e comissões. |
+
 | **nr_cpf** | Cadastro de pessoa física do funcionário | Obrigatório, único para cada colaborador e com validação de 11 dígitos numéricos. |
+
 | **ds_cargo** | Cargo ou função ocupada pelo colaborador na empresa | Obrigatório, define a função exercida (ex: Vendedor, Gerente) e nível de acesso. |
+
 | **nr_telefone** | Telefone de contato do funcionário | Obrigatório, deve incluir o código de área (DDD) e o número de telefone. |
 
-|----------|-----------|------------------------------|
+
 ##                  VEICULO
-|----------|-----------|------------------------------|
+
 | **id_veiculo** | Identificador único do veículo no sistema | PK, obrigatório, numérico inteiro gerado automaticamente pelo sistema, exclusivo para cada veículo. |
+
 | **ds_chassi** | Número de identificação do veículo (VIN/Chassi) | Obrigatório, deve ser único para cada veículo e possuir exatamente 17 caracteres alfanuméricos válidos. |
+
 | **nm_marca** | Marca ou fabricante do veículo | Obrigatório, texto simples que identifica a fabricante (ex: Chevrolet, Volkswagen). |
+
 | **nm_modelo** | Modelo comercial do veículo | Obrigatório, texto simples que identifica o modelo do automóvel (ex: Onix, Gol). |
+
 | **nr_ano** | Ano de fabricação e/ou modelo do veículo | Obrigatório, valor numérico de 4 dígitos, devendo ser superior a 1900 e menor ou igual ao ano subsequente ao atual. |
+
 | **vl_preco**. | Valor estipulado para venda do veículo | Obrigatório, valor decimal estritamente positivo (maior que zero). |
+
 | **tp_veiculo** | Tipo ou categoria de carroceria do veículo | Opcional, classificação interna do automóvel (ex: Hatch, Sedan, SUV, Pickup). |
+
 | **st_veiculo** | Situação atual da disponibilidade do veículo em estoque | Obrigatório, valores possíveis restritos ao domínio: 'Disponível', 'Vendido', 'Reservado', 'Em Manutenção'. |
 
-|----------|-----------|------------------------------|
+
 ##                   VENDA
-|----------|-----------|------------------------------|
+
 | **id_venda** | Identificador único da transação de venda | PK, obrigatório e exclusivo para cada registro de venda efetuado. |
+
 | **id_cliente** | Referência ao cliente comprador da venda | FK, obrigatório, deve corresponder a um id_cliente válido e ativo na tabela CLIENTE (relacionamento 1:N). |
+
 | **id_funcionario** | Referência ao funcionário responsável pela venda | FK, obrigatório, deve corresponder a um id_funcionario válido na tabela FUNCIONARIO (relacionamento 1:N). |
+
 | **id_veiculo** | Referência ao veículo comercializado na venda | FK, obrigatório e único para vendas ativas, devendo corresponder a um id_veiculo válido em VEICULO (relacionamento 1:1). |
+
 | **dt_venda** | Data e horário em que a venda foi efetuada | Obrigatório, preenchido automaticamente com a data e hora do sistema; não aceita datas futuras. |
+
 | **vl_total** | Valor total fechado da negociação | Obrigatório, deve ser um valor numérico decimal maior que zero. |
+
 | **ds_forma_pagamento** | Modalidade utilizada para quitação do valor da venda | Obrigatório, valores possíveis restritos a: 'À Vista', 'Financiamento', 'Cartão de Crédito', 'PIX', 'Misto'. |
+
 | **st_venda** | Situação do andamento e fechamento da venda | Obrigatório, valores possíveis restritos a: 'Pendente', 'Aprovada', 'Concluída', 'Cancelada'. |
 
-|----------|-----------|------------------------------|
+
 ##                   BANCO
-|----------|-----------|------------------------------|
+
 | **id_banco** | Identificador único da instituição financeira | PK, obrigatório e exclusivo para cada banco/financeira parceira. |
+
 | **nm_banco** | Nome comercial ou razão social da instituição financeira | Obrigatório, texto simples contendo a identificação do banco. |
+
 | **nr_cnpj** | Cadastro Nacional da Pessoa Jurídica do banco | Obrigatório, único para cada banco e deve possuir formato válido com 14 dígitos numéricos. |
+
 | **nr_telefone** | Telefone de contato da central ou mesa de crédito do banco | Opcional, deve conter o DDD e número telefônico. |
 
-|----------|-----------|------------------------------|
+
 ##                 FINANCIAMENTO
-|----------|-----------|------------------------------|
+
 | **id_financiamento** | Identificador único do contrato de financiamento | PK, obrigatório e exclusivo para cada proposta ou contrato de financiamento. |
+
 | **id_banco** | Referência ao banco concessor do financiamento | FK, obrigatório, deve corresponder a um id_banco válido na tabela BANCO (relacionamento 1:N). |
+
 | **id_venda** | Referência à venda vinculada ao financiamento | FK, obrigatório e único, deve corresponder a um id_venda válido na tabela VENDA (relacionamento 1:1 opcional). |
+
 | **vl_financiado** | Valor total contratado e financiado pelo banco | Obrigatório, deve ser um valor decimal estritamente positivo (maior que zero). |
+
 | **qt_parcelas** | Quantidade total de parcelas acertadas no contrato | Obrigatório, valor inteiro positivo (ex: 12, 24, 36, 48, 60). |
+
 | **vl_parcela** | Valor cobrado em cada parcela mensal | Obrigatório, deve ser um valor decimal estritamente positivo. |
+
 | **st_financiamento** | Status da análise de crédito e concessão do financiamento | Obrigatório, valores possíveis restritos a: 'Em Análise', 'Aprovado', 'Recusado', 'Cancelado'. |
 
-|----------|-----------|------------------------------|
+
 ##               PEDIDO_DE_VENDA
-|----------|-----------|------------------------------|
+
 | **id_pedido** | Identificador único do pedido burocrático de venda | PK, obrigatório e exclusivo para cada pedido emitido. |
+
 | **id_venda** | Referência à venda correspondente ao pedido | FK, obrigatório, deve corresponder a um id_venda válido na tabela VENDA. |
+
 | **dt_pedido** | Data de criação e processamento do pedido | Obrigatório, preenchido automaticamente com a data corrente no momento do faturamento. |
+
 | **nr_nota_fiscal** | Número do documento fiscal (NF-e) emitido | Opcional, preenchido obrigatoriamente após a emissão do faturamento fiscal do veículo. |
+
 | **nm_cartorio** | Nome do cartório responsável pelos trâmites de transferência | Opcional, texto livre indicando a serventia extrajudicial para reconhecimento de firma e CRV. |
+
 | **st_pedido** | Situação do andamento burocrático do pedido | Obrigatório, valores possíveis restritos a: 'Em Processamento', 'Aguardando Emissão', 'Faturado', 'Cancelado'. |
 
-|----------|-----------|------------------------------|
+
 ##                  ENTREGA 
-|----------|-----------|------------------------------|
+
 | **id_entrega** | Identificador único da logística de entrega | PK, obrigatório e exclusivo para cada agendamento de entrega. |
+
 | **id_venda** | Referência à venda correspondente à entrega | FK, obrigatório, deve corresponder a um id_venda válido na tabela VENDA. |
+
 | **dt_prevista** | Data agendada para entrega ou retirada do veículo | Obrigatório, deve ser uma data igual ou posterior à data do pedido de venda. |
+
 | **dt_entrega** | Data e hora em que o veículo foi efetivamente entregue | Opcional, preenchido no momento em que a entrega é finalizada com sucesso. |
+
 | **ds_endereco_entrega** | Endereço estipulado para entrega física do veículo | Opcional, texto livre especificando o local da entrega ou concessionária. |
+
 | **st_entrega** | Estado de progresso do fluxo logístico | Obrigatório, valores possíveis restritos a: 'Agendada', 'Em Preparação', 'Pronto para Retirada', 'Entregue', 'Cancelada'. |
 
 
