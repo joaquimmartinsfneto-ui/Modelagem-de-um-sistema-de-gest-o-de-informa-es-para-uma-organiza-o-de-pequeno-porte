@@ -3,7 +3,7 @@
 
 ---
 
-## Metadados
+## Metadados 📈
 
 Integrantes: 
 
@@ -14,7 +14,7 @@ Integrantes:
 
 ![Modelo Entidade-Relacionamento](ImagemDoGrupo.jpeg)
 
-## 1. Caracterização da Organização
+## 1. Caracterização da Organização 🗃️
 
 - **Nome e natureza da organização:**  Xenon multimarcas (Concenssionaria )
 - **Contexto e porte:** Com fins lucrativos, Uma empresa com micro operações, com uma quantidade baixa de funcionarios no total atual 6 podendo aumentar.  
@@ -26,18 +26,18 @@ Integrantes:
 
 ---
 
-## 2. Processos de Negócio
+## 2. Processos de Negócio 💰
 
 - **Principais processos mapeados:** Cadastro de clientes, cadastro e controle de veículos, registro de pedidos de vendas, gerenciamento de vendas, controle de financiamento, gerenciamento de entregas, organização dos registros comerciais.
 
 ---
 
-## 3. Requisitos do Sistema
+## 3. Requisitos do Sistema 🖥️
 O Sistema devera armazenar dados do cliente como CPF, Nome, Endereço e Email, tambêm tera que organizar as vendas com datas e formas de pagamentos e que apos a compra ser realizada  com aprovação do finaciamento do banco, ela devera criar um "Pedido de venda" que e aonde vai ter dados como a identificação do pedido, nota fiscal, nome do cartorio, status do pedido e data que o pedido foi realizado. 
 Tambêm tem que haver uma aba sobre os veiculos onde guardara dados como modelo do veiculo, preço, ano do veiculo, marca, chassi para indeitificação, o tipo de veiculo se ele e uma SUV ou outro tipo de carro.. 
 Tambêm tera que haver dados sobre os Funcionarios para ter uma noção sobre as realizações de vendas, os funcionarios teram que ter dados armazenados como nome, CPF, telefone e cargo. 
 
-### 3.1 Requisitos Funcionais
+### 3.1 Requisitos Funcionais ⚙️
 O sistema devera permetir a realização de vendas e a verificação de veiculos disponiveis na concenssionaria, tambêm tera que ter informações sobre a situação da venda e da entrega para a notificação a o cliente e para a organização da organização.
 
 ### 3.2 Requisitos Não Funcionais
@@ -45,7 +45,7 @@ Os requisitos não funcionais que nos averiguamos foram: Usabilidade e disponibi
 
 ---
 
-## 4. Regras de Negócio
+## 4. Regras de Negócio 📋
 
 - **Regras operacionais:** Um pedido só pode ser feito se houver estoque, em caso de financiamento só pode haver pedido se o banco aprovar
 Um pedido só pode ser feito se as informações do veículo estiver certas
@@ -53,7 +53,7 @@ Um pedido só pode ser feito se as informações do veículo estiver certas
 - **Restrições organizacionais:** Um pedido só pode ser feito se as informações do veículo estiver certas
 ---
 
-## 5. Dicionário de Dados Conceitual (Preliminar)
+## 5. Dicionário de Dados Conceitual (Preliminar) 📒
 
 | Atributo | Descrição | Regra de negócio associada |
 
