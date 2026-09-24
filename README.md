@@ -19,7 +19,7 @@ Integrantes:
 - **Nome e natureza da organização:**  Xenon multimarcas (Concenssionaria )
 - **Contexto e porte:** Com fins lucrativos, Uma empresa com micro operações, com uma quantidade baixa de funcionarios no total atual 6 podendo aumentar.  
 - **Problemas e necessidades identificados:** Falta de organização e comprovante de transações, manutenções não organizadas.
-- **Justificativa da escolha:** Um de nossos integrantes do grupo identificou a necessidade da empresa e botou que encaixaria perfeitamente no trabalho solicitado, consideramos o fato dessa área ter bastante movimentação
+- **Justificativa da escolha:** Um de nossos integrantes do grupo identificou a necessidade da empresa e notou que encaixaria perfeitamente no trabalho solicitado, consideramos o fato dessa área ter bastante movimentação
 - **Evidências da organização:** instagram: @multimarcasxenon
 - Cartão digital da empresa: https://cartao-digital.com/xenonmultimarcas/
 - local do Maps: https://share.google/2ecURySgI5GrRgYwr
